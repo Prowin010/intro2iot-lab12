@@ -4,7 +4,7 @@ const int lightSensorPin = A0;   // Photoresistor connected to A0
 const int buttonPin = 2;         // Button connected to D2
 const int ledPin = 9;            // LED (room light) connected to D9
 
-const int darkThreshold = 500;   // Adjust based on ambient light conditions
+const int darkThreshold = 600;   // Adjust based on ambient light conditions
 
 bool isDark = false;
 bool isButtonOn = false;
@@ -39,7 +39,7 @@ bool isRoomDark() {
   Serial.println(lightLevel);
 
   // TODO: Fix this logic so it returns true when it's dark
-  return false; // <-- incorrect for now
+  return lightLevel < darkThreshold;  // <-- incorrect for now
 }
 
 // ===============================
