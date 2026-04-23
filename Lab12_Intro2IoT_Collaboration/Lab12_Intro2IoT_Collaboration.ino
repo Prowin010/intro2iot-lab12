@@ -42,11 +42,6 @@ bool isRoomDark() {
   return lightLevel < darkThreshold;  // <-- incorrect for now
 }
 
-// ===============================
-// Manual Switch Control – Student 2
-bool isButtonActivated() {
-  bool state = digitalRead(buttonPin);
-  
 // Manual Switch Control – Student 2
 bool isButtonActivated() {
   bool state = digitalRead(buttonPin);
@@ -62,5 +57,7 @@ bool isButtonActivated() {
     Serial.println("Button: ON");
     return true;
   }
+  
   // HINT: Serial.print should say "ON" or "OFF" too
 }
+
