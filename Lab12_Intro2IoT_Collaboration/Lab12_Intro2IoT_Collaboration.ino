@@ -46,17 +46,17 @@ bool isRoomDark() {
 // Manual Switch Control – Student 2
 bool isButtonActivated() {
   bool state = digitalRead(buttonPin);
-  
-  Serial.print("Button: ");
 
   // TODO: Fix this logic and print the correct status
   // Button is normally HIGH
   if (state == HIGH) {
     // Button not pressed
-    return true;
+    return false;
+    Serial.println("Button: OFF");
   } else {
     // Button pressed
-    return false;
+    return true;
+    Serial.println("Button: ON");
   }
 
   // HINT: Serial.print should say "ON" or "OFF" too
